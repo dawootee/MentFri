@@ -15,8 +15,8 @@ class Controller {
       $this->scripts = new stdClass();
     }
     $this->stylesheets->admin = [
-        'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css'
-
+        'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css',
+        ROOT_URL . 'views/assets/css/style.css'
     ];
     $this->scripts->admin = [
         "https://code.jquery.com/jquery-3.2.1.slim.min.js",
@@ -72,40 +72,12 @@ class Controller {
     }
   }
 
-  /**
-   * @return string
-   */
-  public function get_template_url() {
-    return $this->get_root_url() . "template/";
-  }
-
-  /**
-   * @return string
-   */
-  public function get_root_url() {
-    return ROOT_URL;
-  }
-
-  /**
-   * @return string
-   */
-  public function get_template_path() {
-      return realpath(__DIR__ . '/../template') . "/";
-  }
-
-  /**
-   * @return string
-   */
-  public function get_root_path() {
-      return realpath(__DIR__ . "/../") . "/";
-  }
-
     /**
      * @param $model
      * @return mixed
      */
     public function model($model) {
-        require_once(realpath(__DIR__ . '/../models/' . strtolower($model) . '.php'));
+        require_once(ROOT_PATH . 'models/' . strtolower($model) . '.php');
         return new $model;
     }
 
@@ -115,7 +87,8 @@ class Controller {
      * @return mixed
      */
     public function view($view, $data = null) {
-      return require_once(realpath(__DIR__ . '/../views/' . strtolower($view) . '.php'));
+
+      return require_once(ROOT_PATH . 'views/' . strtolower($view) . '.php');
     }
 
 }

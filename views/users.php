@@ -1,18 +1,7 @@
 
 <?php
 
-
-$this->stylesheets = [
-    'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css',
-    $this->get_template_path() . 'style.css'
-];
-
-
-
-
-foreach($this->stylesheets as $stylesheet) {
-	echo '<link rel="stylesheet" href="' . $stylesheet . '" />';
-}
+$this->header('admin');
 
 ?>
 

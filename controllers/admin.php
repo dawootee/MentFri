@@ -3,7 +3,7 @@
 /**
  * Class Dashboard
  */
-class Dashboard extends Controller {
+class Admin extends Controller {
 
     /**
      * Dashboard constructor.
@@ -17,6 +17,10 @@ class Dashboard extends Controller {
           $this->view('dashboard');
         }
 
+    }
+
+    public function login() {
+      $this->view('login');
     }
 
     public function users() {
