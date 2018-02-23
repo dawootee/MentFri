@@ -14,7 +14,7 @@ $action = "__construct";
 if (strlen($url) > 0) {
     $url = explode('/', filter_var(rtrim($url, '/'), FILTER_SANITIZE_URL));
     if (isset($url[0])) {
-      if($url[0] == "admin") {
+      if(in_array($url[0], ["admin", "ajax"])) {
         $controller = $url[0];
         if(isset($url[1])) {
           $action = $url[1];

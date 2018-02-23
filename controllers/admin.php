@@ -36,4 +36,5 @@ class Admin extends Controller {
       $this->view('posts', $data);
     }
 
+
 }

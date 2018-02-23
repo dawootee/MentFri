@@ -46,12 +46,28 @@
         $(emailAddressField).removeClass("is-invalid").addClass("is-valid");
         $(passwordField).addClass("is-invalid");
       } else {
-        infoMessage = '<p class="text-success">Sending AJAX request...</p>';
         $(emailAddressField).add(passwordField).removeClass("is-invalid").addClass("is-valid");
+
+        $.ajax({
+          beforeSend: function() {
+            infoMessage = '<p class="text-info">Sending request&hellip;</p>';
+          },
+          complete: function() {
+            $(formInfo).html(infoMessage);
+          },
+          error: function() {
+            infoMessage = '<p class="text-danger">The requested file wasn\'t found.</p>';
+          },
+          success: function(response) {
+            console.log(response);
+          },
+          type: "POST",
+          url: "http://localhost/mentfri/?url=ajax/checkLogin"
+        });
+
       }
 
 
-      $(formInfo).html(infoMessage);
     });
     </script>
   </body>
