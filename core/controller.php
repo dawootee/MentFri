@@ -21,7 +21,8 @@ class Controller {
     $this->scripts->admin = [
         "https://code.jquery.com/jquery-3.2.1.min.js",
         "https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js",
-        "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"
+        "https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js",
+        ROOT_URL . "views/assets/js/core.js"
     ];
     $this->stylesheets->public = [];
     $this->scripts->public = [];
@@ -87,6 +88,7 @@ class Controller {
      * @return mixed
      */
     public function view($view, $data = null) {
+
 
       return require_once(ROOT_PATH . 'views/' . strtolower($view) . '.php');
     }
