@@ -5,12 +5,8 @@
  */
 class Admin extends Controller {
 
-    /**
-     * Dashboard constructor.
-     */
 
-
-     public $pages = ['dashboard' => 'Dashboard', 'users' => 'Users', 'posts' => 'Posts'];
+    public $pages = ['dashboard' => 'Dashboard', 'users' => 'Users', 'posts' => 'Posts'];
 
 
     public function __construct($action) {
@@ -31,6 +27,7 @@ class Admin extends Controller {
           $this->pages[$user_defined_function_url] = $user_defined_function;
         }
       }
+
 
 
       if($action !== "__construct") {
@@ -63,14 +60,13 @@ class Admin extends Controller {
       $this->view('posts', $data);
     }
 
+    public function mf_user_defined_1() {
+      $this->view('mf_user_defined_1');
+    }
 
-      public function mf_user_defined_1() {
-        echo "User defined 1";
-      }
-
-      public function mf_user_defined_2() {
-        echo "User defined 2";
-      }
+    public function mf_user_defined_2() {
+      $this->view('mf_user_defined_2');
+    }
 
 
 }

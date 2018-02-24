@@ -11,7 +11,7 @@
 
 		<div class="container-fluid p-0">
 
-					<?php require_once("assets/inc/panel.inc"); ?>
+					<?php $phase = "posts"; require_once("assets/inc/panel.inc"); ?>
 
 
 

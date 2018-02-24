@@ -88,8 +88,7 @@ class Controller {
      * @return mixed
      */
     public function view($view, $data = null) {
-
-
+      $phase = $view;
       return require_once(ROOT_PATH . 'views/' . strtolower($view) . '.php');
     }
 

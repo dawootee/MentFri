@@ -8,7 +8,7 @@
   <body>
 
     <div class="container-fluid p-0">
-      <?php require_once("assets/inc/panel.inc"); ?>
+      <?php $phase = "users"; require_once("assets/inc/panel.inc"); ?>
       <div class="content">
         <?php require_once("assets/inc/navbar.inc"); ?>
 				<h2>Users</h2>
