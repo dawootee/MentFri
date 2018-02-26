@@ -11,6 +11,9 @@
       <?php $phase = "users"; require_once("assets/inc/panel.inc"); ?>
       <div class="content">
         <?php require_once("assets/inc/navbar.inc"); ?>
+
+        <div class="m-5">
+
 				<h2>Users</h2>
 
 
@@ -62,6 +65,8 @@
 					<?php } ?>
 					</tbody>
 				</table>
+
+      </div>
 
 
       </div>

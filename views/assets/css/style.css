@@ -1,17 +1,17 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway);
-body { font-family: 'Raleway'; }
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+body { font-family: 'Roboto'; }
 
 
 html, body { height: 100%; }
 
 
 
-.leading-navigation { background-color: #222; }
+.leading-navigation { background-color: #222; box-shadow: 0 3px 3px #777; }
 
 
 .panel-wrapper { display: none; width: 100%; height: 100%; position: fixed; }
 .panel-wrapper .panel-layer { background-color: rgba(0, 0, 0, 0.5); width: 100%; height: 100%; }
-.panel-wrapper .panel-inner { position: fixed; top: 0; left: 0; width: 150px; height: 100%; background-color: #222; color: #fff; overflow: auto; }
+.panel-wrapper .panel-inner { position: fixed; top: 0; left: 0; width: 150px; height: 100%; background-color: #222; color: #fff; overflow: auto; box-shadow: 0 3px 3px #777; }
 .panel-wrapper .panel-inner .leading-panel-navigation .nav-link.active { color: #fff; }
 .panel-wrapper .panel-inner .leading-panel-navigation .nav-link:not(.active) { color: #868e96; }
 .panel-wrapper .panel-inner .leading-panel-navigation .nav-link:not(.active):hover { color: #bbb; }
@@ -20,8 +20,9 @@ html, body { height: 100%; }
 
 .content { width: 100%; }
 
-
-
+.text-editor { border-radius: 6px; border: solid 1px #ced4da; overflow: hidden; }
+.text-editor .text-editor-toolbar { border-bottom: solid 1px #ced4da; }
+.text-editor .text-editor-content { min-height: 250px; }
 
 .has-active-panel { overflow: hidden; }
 .has-active-panel .panel-wrapper { display: block; }
