@@ -46,17 +46,10 @@ class Admin extends Controller {
       $this->view('login');
     }
 
-    public function users() {
-      $users = $this->model('User');
-      $data = $users->getUsers();
-      $this->view('users', $data);
-    }
-
 
     public function posts($actions = []) {
 
-
-      if(!isset($actions)) {
+      if(empty($actions)) {
         $posts = $this->model('Post');
         $data = $posts->getPosts();
         $this->view("posts-list", $data);
@@ -64,6 +57,25 @@ class Admin extends Controller {
         foreach($actions as $action) {
           if($action === "new") {
             $this->view('posts-new');
+          } else {
+            echo "Not found";
+          }
+        }
+      }
+
+
+    }
+
+    public function users($actions = []) {
+
+      if(empty($actions)) {
+        $users = $this->model('User');
+        $data = $users->getUsers();
+        $this->view("users-list", $data);
+      } else {
+        foreach($actions as $action) {
+          if($action === "new") {
+            $this->view('users-new');
           } else {
             echo "Not found";
           }

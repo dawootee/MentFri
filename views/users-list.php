@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Dashboard</title>
+    <title>Users</title>
     <?php $this->header('admin'); ?>
   </head>
   <body>
@@ -14,7 +14,7 @@
 
         <div class="m-5">
 
-				<h2>Users</h2>
+				<h2>Users <a class="btn btn-primary" href="<?php echo ROOT_URL; ?>?url=admin/users/new">New User</a></h2>
 
 
 				<table class="table table-bordered table-striped">

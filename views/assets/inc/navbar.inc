@@ -1,4 +1,4 @@
-<div class="navbar navbar-dark navbar-expand-lg justify-content-between leading-navigation">
+<div class="navbar navbar-dark navbar-expand-lg justify-content-between sticky-top leading-navigation">
 
   <div class="panel-toggler p-1">
     <span class="navbar-toggler-icon"></span>

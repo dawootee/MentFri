@@ -17,9 +17,15 @@
 
 		<div class="content">
 
+
+
+
 		<?php require_once("assets/inc/navbar.inc"); ?>
 
-					<h2>Posts</h2>
+
+		<div class="m-5">
+
+					<h2>Posts <a class="btn btn-primary" href="<?php echo ROOT_URL; ?>?url=admin/posts/new">New Post</a></h2>
 					<table>
 						<thead>
 							<tr>
@@ -68,6 +74,9 @@
 						<?php } ?>
 						</tbody>
 					</table>
+
+				</div>
+
 		</div>
 
 

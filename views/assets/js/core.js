@@ -1,9 +1,19 @@
 
+
+$(document).on("input", "[contenteditable]", function() {
+  var element = $(this);
+  if(!element.text().trim().length) {
+    element.empty();
+  }
+});
+
+
 $(document).ready(function() {
   $(".panel-toggler").on("click", function(event) {
     event.preventDefault();
     $("body").toggleClass("has-active-panel");
   });
+
 
   const editor = pell.init({
     element: document.getElementsByClassName('text-editor')[0],
@@ -45,10 +55,8 @@ $(document).ready(function() {
     classes: {
       actionbar: 'w-100 text-editor-toolbar btn-group',
       button: 'btn rounded-0',
-      content: 'text-editor-content px-3 py-2'
-    }
-  })
-
-
-  editor.content.innerHTML = "<p>Write something&hellip;</p>"
+      content: 'text-editor-content p-3'
+    },
+    placeholder: "Write something..."
+  });
 });
